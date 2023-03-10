@@ -1,4 +1,4 @@
-using SimpleDrawing, Plots, RationalGenerators
+using Plots, RationalGenerators
 
 function make_graphic(max_n::Int = 10)
     numbers = collect(RationalGenerator(max_n))
