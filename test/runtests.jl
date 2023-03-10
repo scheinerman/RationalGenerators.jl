@@ -6,3 +6,7 @@ b = collect(RationalGenerator(5))
 
 @test maximum(b) == 4
 @test minimum(b) == 1//4
+
+a = collect(RationalGenerator(10))
+b = 1 .// a 
+@test sort(a) == sort(b)
