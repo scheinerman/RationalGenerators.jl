@@ -7,7 +7,6 @@ without repetition.
 where `a` and `b` are relatively prime and `a+b ≤ n`. 
 * Use `RationalGenerator()` to create *all* rational numbers. 
 
-In both cases, no rational numbers are repeated. 
 
 ## Order
 
@@ -37,4 +36,11 @@ julia> for r in RationalGenerator()
             end
         end
 3//1
+
+julia> [t for t in RationalGenerator(20) if denominator(t) == 10]
+4-element Vector{Rational{Int64}}:
+ 1//10
+ 3//10
+ 7//10
+ 9//10
 ```
