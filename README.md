@@ -1,6 +1,7 @@
 # `RationalGenerators`
 
-This module provides iterators for creating positive rational numbers.
+This module provides iterators for creating positive rational numbers 
+without repetition.
 
 * Use `RationalGenerator(n)` to create all rational numbers of the form `a//b` 
 where `a` and `b` are relatively prime and `a+b ≤ n`. 
