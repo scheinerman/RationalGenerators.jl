@@ -5,7 +5,7 @@ without repetition.
 
 * Use `RationalGenerator(n)` to create all rational numbers of the form `a//b` 
 where `a` and `b` are relatively prime and `a+b ≤ n`. 
-* Use `RationalGenerator()` to create *all* rational numbers. 
+* Use `RationalGenerator()` to create all rational numbers. 
 
 
 ## Order
