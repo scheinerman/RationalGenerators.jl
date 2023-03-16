@@ -2,7 +2,7 @@ module RationalGenerators
 
 using Primes
 
-export RationalGenerator
+export RationalGenerator, RatGen
 
 """
     RationalGenerator(n)
@@ -14,6 +14,8 @@ Create an iterator that produces positive rational numbers without repetition.
 where `gcd(a,b) = 1` and `a+b ≤ n`. 
 
 `RationalGenerator()` creates all rational numbers.
+
+Note: `RatGen` may be used an abbrevation in place of `RationalGenerator`.
 """
 struct RationalGenerator
     max_n::Int
@@ -21,6 +23,9 @@ struct RationalGenerator
         new(last)
     end
 end
+
+RatGen = RationalGenerator
+
 
 # State description: (a,n) ==> a//(n-a)
 
@@ -71,5 +76,8 @@ function Base.IteratorSize(RG::RationalGenerator)
 end
 
 Base.length(RG::RationalGenerator) = _size(RG)
+
+
+include("SmallRatGen.jl")
 
 end # module RationalGenerators

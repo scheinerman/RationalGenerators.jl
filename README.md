@@ -48,3 +48,32 @@ julia> [t for t in RationalGenerator(20) if denominator(t) == 10]
  7//10
  9//10
 ```
+
+## Small Rationals
+
+To generate rational numbers (without repetition) restricted to 
+the interval `(0,1]`, use `SmallRationalGenerator`. 
+
+* `SmallRationalGenerator(last_den)` generates all rationals in `(0,1]` 
+whose denominators are at most `last_den`.
+* `SmallRationalGenerator()` generates all rationals in `(0,1]`.
+
+`SmallRatGen` is an abbreviation for `SmallRationalGenerator`.
+
+The rationals are produced with successively larger denominators, 
+starting with `1`, and then successively larger numerators. 
+
+```
+julia> collect(SmallRatGen(6))'
+1×12 adjoint(::Vector{Rational{Int64}}) with eltype Rational{Int64}:
+ 1//1  1//2  1//3  2//3  1//4  3//4  1//5  2//5  3//5  4//5  1//6  5//6
+
+julia> [t for t in SmallRatGen(10) if denominator(t) == 9]
+6-element Vector{Rational{Int64}}:
+ 1//9
+ 2//9
+ 4//9
+ 5//9
+ 7//9
+ 8//9
+ ```

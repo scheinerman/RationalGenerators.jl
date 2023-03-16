@@ -1,7 +1,7 @@
 name = "RationalGenerators"
 uuid = "2737ff73-0d59-47a5-9105-cfa0dee446ca"
 authors = ["Ed Scheinerman <ers@jhu.edu>"]
-version = "0.1.0"
+version = "0.1.1"
 
 [deps]
 Primes = "27ebfcd6-29c5-5fa9-bf4b-fb8fc14df3ae"
