@@ -50,11 +50,16 @@ function _size(SRG::SmallRatGen)
     if SRG.last_den == 0
         return 0
     end
-
-
     return sum(totient(k) for k = 1:SRG.last_den) 
 end
 
+
+function Base.IteratorSize(SRG::SmallRatGen)
+    if SRG.last_den < 0
+        return Base.IsInfinite()
+    end
+    return Base.HasLength()
+end
 
 Base.length(SRG::SmallRatGen) = _size(SRG)
 
