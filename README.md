@@ -77,3 +77,18 @@ julia> [t for t in SmallRatGen(10) if denominator(t) == 9]
  7//9
  8//9
  ```
+
+ To create rationals strictly between `0` and `1`, one can do this:
+ ```
+julia> X = (t for t in SmallRatGen(4) if t<1);
+
+julia> collect(X)'
+1×5 adjoint(::Vector{Rational{Int64}}) with eltype Rational{Int64}:
+ 1//2  1//3  2//3  1//4  3//4
+ ```
+
+ ## Negative Argument
+
+ For both `RationalGenerator` and `SmallRationalGenerator`, a negative argument 
+ creates an infinite generator.  That is, `RationalGenerator(-1)` has the same
+ effect as `RationalGenerator()`.
