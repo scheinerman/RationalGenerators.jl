@@ -10,7 +10,7 @@ where `a` and `b` are relatively prime and `a+b ≤ n`.
 
 ## Order
 
-The first rational number produced is `1//1`. Then `1//2` and `2//1`. Then, for `n` equal to `4` and up, we have, in increasing order, 
+The first rational number produced is `1//1`. Then `1//2` and `2//1`. Then, for `n` equal to `3` and up, we have, in increasing order, 
 the rational numbers of the form `a//b` where `a+b = n` and `gcd(a,b) = 1`. 
 
 This figure illustrates the order in which rational numbers are generated:
