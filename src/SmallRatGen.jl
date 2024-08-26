@@ -59,7 +59,7 @@ function _size(SRG::SmallRatGen)
     if SRG.last_den == 0
         return 0
     end
-    return sum(totient(k) for k = 1:SRG.last_den) 
+    return sum(totient(k) for k = 1:SRG.last_den)
 end
 
 
@@ -71,4 +71,3 @@ function Base.IteratorSize(SRG::SmallRatGen)
 end
 
 Base.length(SRG::SmallRatGen) = _size(SRG)
-

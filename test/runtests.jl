@@ -14,15 +14,15 @@ using Test, RationalGenerators
 
 end
 
-@testset "Small Rationals" begin 
+@testset "Small Rationals" begin
     a = [t for t in SmallRationalGenerator(10)]
     b = collect(SmallRationalGenerator(10))
-    @test a==b 
+    @test a == b
 
-    @test minimum(a) == 1//10 
-    @test maximum(a) == 1 
+    @test minimum(a) == 1 // 10
+    @test maximum(a) == 1
 
-    aa = 1 .// a 
+    aa = 1 .// a
     @test all(aa .>= 1)
 
 end
