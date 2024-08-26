@@ -1,4 +1,4 @@
-# `RationalGenerators`
+# RationalGenerators
 
 This module provides iterators for creating positive rational numbers 
 without repetition.
